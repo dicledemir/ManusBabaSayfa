@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dönersen Islık Çal</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        a {
+            font-size: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 15px;
+            margin-top: 100px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div style="position:fixed;top:0;width:100%;text-align:center; padding-bottom:20px; z-index:10;text-align:center;background-color:black;" class="col-12; ">
+        <div class="colum">
+            <a href="#"><img src="manus.PNG" /></a>
+            <a href="index.html" class="menu">Ana Sayfa</a>
+            <a href="album.html" class="menu">Albüm-Dönersen Islık Çal</a>
+            <a href="iletisim.aspx" class="menu">İletişim</a>
+            <a href="biyografi.html" class="menu">Biyografi</a>
+            <a href="https://www.instagram.com/manusbaba/?hl=tr" class="menu">İnstagaleri</a>
+
+        </div>
+
+    </div>
+    <div class="container" style="background-color:#EAE5E5;width:100%">
+        <div class="row" style="margin-top:100px">
+            <div class="col-sm-4">
+                <img src="manus-baba-donersen-islik-cal.jpg" class="rounded" style="margin-top:50px">
+                <input name="Eteği Belinde" value="Dönersen Islık Cal" style="background-color:#EAE5E5;margin-top:15px;margin-left:50px;border-style:none;" />
+
+                <p style="margin-left:10px;">Manuş Baba / Dönersen Islık Çal</p>
+                <hr />
+
+
+
+
+                <audio controls="controls">
+
+                    <!--<source id="player" ; src="Islikcal.mp3" type="audio/mpeg;">-->
+
+                    <source id="player" ; src="Islikcal.mp3" type="audio/mpeg;" autoplay="true">
+
+                    <hr />
+
+                </audio>
+
+
+                <hr />
+                <ol>
+                    <li>
+                        <a href="#" style="color:black;display:inline-block;margin-top:0px"> <p>Dönersen Islık Cal</p></a>
+                        <hr />
+                    </li>
+                    <li>
+                        <a href="#" style="color:black;display:inline-block;margin-top:0px"> <p>Eteği Belinde</p></a>
+                        <hr />
+                    </li>
+                    <li>
+                        <a href="#" style="color:black;display:inline-block;margin-top:0px"> <p>Haberin Var mı?</p></a>
+
+                        <hr />
+                    </li>
+                    <li>
+                        <a href="#" style="color:black;display:inline-block;margin-top:0px"> <p>Gülcemal</p></a>
+
+                        <hr />
+                    </li>
+
+                    <li>
+                        <a href="#" style="color:black;display:inline-block;margin-top:0px"> <p>Derin derin sevdalara dalarsın</p></a>
+
+                        <hr />
+                    </li>
+
+
+                </ol>
+            </div>
+            <div class="col-sm-4">
+
+                <img src="manus-baba-donersen-islik-cal.jpg" class="rounded-circle" style="width:80px;display:inline-block;margin-top:50px;">
+                <h3 style="display:inline-block;position:absolute; margin-top:35px;margin-left:20px;"> Manuş Baba</h3>
+                <a href="https://twitter.com/manusbaba" style="position:absolute;margin-top:65px;"><img src="twitter.png" /></a>
+                <p style="margin-left:160px;margin-top:-40px;">Takip et</p>
+                <a href=""><img src="album1.PNG" style="width:450px;height:350px;margin-top:30px;border-radius:15px;" /></a>
+                <a href=""><img src="album2.PNG" style="width:450px;height:350px;margin-top:30px;border-radius:15px;" /></a>
+                <a href=""><img src="album3.PNG" style="width:450px;height:350px;margin-top:30px;border-radius:15px;" /></a>
+                <a href=""><img src="album4.PNG" style="width:450px;height:350px;margin-top:30px;border-radius:15px;" /></a>
+            </div>
+            <div class="col-sm-4">
+                <div style="vertical-align:middle;margin-top:200px;margin-left:150px">
+                    <a href="https://www.facebook.com/manusbaba/" style="display:block"><img src="facebook.png" /></a>
+                    <a href="https://www.instagram.com/manusbaba/?hl=tr" style="margin-top:50px;position:absolute"><img src="iconfinder.png" /></a>
+                    <a href="https://www.youtube.com/channel/UCfvnn2bE5rD8l-GFZvARQ5w"style="margin-top:150px;position:absolute"><img src="youtube.png" /></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--jquery kütüphanesi-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("ol li").eq(0).click(function () {
+         
+            $("input").attr("value", "Dönersen Islık Cal");
+            $("#player").attr('src', 'Islikcal.mp3');
+            var vid = $('audio #player')
+            vid.play();
+            //$('audio').trigger('play');
+
+        });
+        $("ol li").eq(1).click(function () {
+
+            $("input").attr("value", "Eteği Belinde");
+            $("#player").attr('src', 'Etegi-Belinde.mp3');
+            var vid = $('audio #player')
+            function setToMuted() {
+                vid.defaultMuted = true;
+                vid.load()
+            }
+            //$('#player').play();
+            //   $('#player').get(0).play();
+            //$('audio').trigger('play');
+           
+
+
+        });
+
+        $("ol li").eq(2).click(function () {
+
+            $("input").attr("value", "Haberin Var mı?");
+
+            $("#player").val("src", "HaberinVarmi.mp3");
+            //$('audio').trigger('play');
+
+        });
+        $("ol li").eq(3).click(function () {
+
+            $("input").attr("value", "Gulcemal");
+            $("#player").attr("src", "Gulcemal.mp3");
+            //$('audio').trigger('play');
+             
+            // $("audio").attr("src", "Gülcemal.mp3");
+
+        });
+        $("ol li").eq(4).click(function () {
+
+            $("input").attr("value", "Derinderin sevdalaradalar");
+            $("#player").attr("src", "Islikcal.mp3");
+            //$('audio').trigger('play');
+
+        });
+
+    </script>
+</body>
+</html>

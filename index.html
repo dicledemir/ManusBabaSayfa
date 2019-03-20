@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <meta charset="utf-8" />
+    <style>
+        a {
+            font-size: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 15px;
+            margin-top: 100px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu {
+            /*border-style: outset;
+            border-width: 2px;
+            border-color: red;
+            border-collapse: separate;
+            border-spacing: 15px;*/
+        }
+
+        .manus {
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin-left: 110px;
+            margin-top: -300px;
+        }
+
+        #ileri {
+            font-size: 60px;
+            margin-right: 100px;
+            margin-top: 234px;
+            margin-left: 1250px;
+        }
+
+        #geri {
+            position: relative;
+            font-size: 60px;
+            margin-left: 50px;
+        }
+
+        .resimler {
+            width: 100%;
+            height: 40px;
+            color: black;
+        }
+
+        .bir {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            border-style: solid;
+        }
+
+        .iki {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            border-style: solid;
+        }
+
+        .uc {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            border-style: solid;
+        }
+
+        .dort {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            border-style: solid;
+        }
+
+        .bes {
+            margin-left: 650px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            border-style: solid;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="position:fixed;top:0;width:100%;text-align:center; padding-bottom:20px; z-index:10;text-align:center;background-color:black;" class="col-12; ">
+        <div class="colum">
+            <a href="#"><img src="manus.PNG" /></a>
+            <a href="index.html" class="menu">Ana Sayfa</a>
+            <a href="album.html" class="menu">Albüm-Dönersen Islık Çal</a>
+            <a href="iletisim.aspx" class="menu">İletişim</a>
+            <a href="biyografi.html" class="menu">Biyografi</a>
+            <a href="https://www.instagram.com/manusbaba/?hl=tr" class="menu">İnstagaleri</a>
+
+        </div>
+    </div>
+
+    <div style="width:1519px;height:630px;background-color:black;position:relative" class="buyukresim" onmouseover="durdur">
+
+        <i class="fas fa-chevron-left" id="geri" style="color:white ;display:inline-block"></i>
+        <i class="fas fa-chevron-right" id="ileri" style="color:white;display:inline-block"></i>
+
+        <img src="manus5.jpg" class="manus" style="display:inline-block" />
+
+    </div>
+
+    <div class="resimler" style="display:block;margin-top:0px;background-color:black; position:relative ">
+        <img src="manus5.jpg" class="bes" />
+        <img src="manus1.jpg" class="bir" />
+        <img src="manus2.jpg" class="iki" />
+        <img src="manus3.jpg" class="uc" />
+        <img src="manus4.jpg" class="dort" />
+
+
+    </div>
+
+
+
+    <img src="islikcal.PNG" style="width:100%;" />
+    <!--jquery kütüphanesi-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(".bes").click(function () {
+            $(".resimler img").css("borderColor", "black");
+            $(".buyukresim img").attr("src", "manus5.jpg");
+            $(this).css("borderColor", "white");
+
+        });
+        $(".bir").click(function () {
+            $(".resimler img").css("borderColor", "black");
+            $(".buyukresim img").attr("src", "manus1.jpg");
+            $(this).css("borderColor", "white");
+
+        });
+        $(".iki").click(function () {
+            $(".resimler img").css("borderColor", "black");
+            $(".buyukresim img").attr("src", "manus2.jpg");
+            $(this).css("borderColor", "white");
+
+        });
+        $(".uc").click(function () {
+            $(".resimler img").css("borderColor", "black");
+            $(".buyukresim img").attr("src", "manus3.jpg");
+            $(this).css("borderColor", "white");
+
+        });
+        $(".dort").click(function () {
+            $(".resimler img").css("borderColor", "black");
+            $(".buyukresim img").attr("src", "manus4.jpg");
+            $(this).css("borderColor", "white");
+
+        });
+
+
+
+
+    </script>
+    <script>
+
+        var allImages;
+        var imgCount;
+        var current = 0;
+        var images;
+
+        $(document).ready(function ($) {
+            images = $(".buyukresim img");
+            imgCount = $(".resimler img").length;
+            allImages = $(".resimler img");
+            var a = setInterval(slide, 2500);
+        });
+
+        function slide() {
+
+            if (current == (imgCount - 1)) {
+                $(".resimler img").css("borderColor", "black");
+                $(".buyukresim img").attr("src", "manus" + "1" + ".jpg");
+                $('.resimler img:eq(0)').css("borderColor", "white");
+                current = 0;
+            }
+            else {
+                ++current;
+                //$(images).attr("src", images.eq(current));
+                $(".resimler img").css("borderColor", "black");
+
+                $(".buyukresim img").attr("src", "manus" + current + ".jpg");
+                $('.resimler img:eq(' + current + ')').css("borderColor", "white");
+
+
+            }
+        }
+    </script>
+    <script>
+
+        //var calisanFok = null;
+        // $(".buyukresim img").mouseout(function () {
+        //     calisanFok = setInterval(slide);
+
+
+        // });
+
+        function durdur() {
+
+            clearInterval(a);
+
+        };
+    </script>
+
+
+</body>
+</html>
